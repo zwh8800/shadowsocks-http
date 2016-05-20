@@ -3,7 +3,7 @@ MAINTAINER zwh8800 <496781108@qq.com>
 
 WORKDIR /work
 
-RUN apk update && apk add build-base ca-certificates git tzdata && \
+RUN apk update && apk add build-base openssl ca-certificates git tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
     go get github.com/shadowsocks/shadowsocks-go/cmd/shadowsocks-local && \
