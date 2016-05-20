@@ -18,6 +18,8 @@ RUN apk update && apk add build-base ca-certificates git tzdata && \
     apk del build-base openssl && \
     rm -rf /var/cache/apk/*
 
+ADD start.sh /work
+
 VOLUME /etc/shadowsocks
 
 EXPORT 8123
