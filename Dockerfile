@@ -22,6 +22,6 @@ ADD start.sh /work
 
 VOLUME /etc/shadowsocks
 
-EXPORT 8123
+EXPOSE 8123
 
 CMD ["./start.sh"]
